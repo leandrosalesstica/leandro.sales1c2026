@@ -1,47 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-<title>meu blog de emagecimento e saude mental</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emagrecimento e Saúde Mental | Blog</title>
+    <style>
+        /* CSS Base para Visualização Limpa */
+        :root {
+            --primary: #2c3e50;
+            --accent: #16a085;
+            --bg: #fafafa;
+            --text: #333;
+            --alert-bg: #fff3cd;
+            --alert-border: #ffeba0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 15px;
+        }
+        section, article {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .two-columns {
+            display: flex;
+            gap: 20px;
+        }
+        .two-columns > div {
+            flex: 1;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .alert-box {
+            background-color: var(--alert-bg);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .two-columns {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>meu blog</h1>
-</header>
-<nav>
-    <a href="#">inicio</a>| <a href="#">emagrecimento e saude mental</a>
-</nav>
-<main>
-<h2>emagrecimento e saude mental</h2>
-<p>esse e meu primeiro site criado na escola</p>
-<img src=""
-</main>
 
+<div class="container">
+    <header>
+        <h1>Emagrecimento e Saúde Mental: Um Olhar Realista e Moderno</h1>
+    </header>
 
+    <main>
+        <!-- Texto 1: Exercícios e Saúde Mental -->
+        <article>
+            <h2>Exercícios e Saúde Mental – O Seu Cérebro Também Agradece</h2>
+            <p>Praticar exercícios físicos vai muito além de buscar uma mudança no espelho; trata-se de um dos melhores remédios naturais para a nossa mente. Quando nos movimentamos, o corpo libera hormônios poderosos como a endorfina e a dopamina, conhecidos como os hormônios da felicidade. Eles são responsáveis por reduzir os níveis de estresse, aliviar a ansiedade e melhorar a qualidade do sono.</p>
+            <p>Para quem está na rotina puxada dos estudos, incluir uma atividade física no dia a dia ajuda a limpar a mente, aumenta a capacidade de foco e melhora a memória. Cuidar do corpo é, também, cuidar da cabeça.</p>
+        </article>
 
+        <!-- Texto 2: Aeróbico vs. Musculação -->
+        <section>
+            <h2>Aeróbico vs. Musculação – Entenda a Diferença</h2>
+            <div class="two-columns">
+                <div>
+                    <h3>Exercícios Aeróbicos</h3>
+                    <p>Como corrida, ciclismo, natação e dança — utilizam o oxigênio para gerar energia e focam na melhora do sistema cardiovascular, aumentando a sua resistência e o famoso "fôlego".</p>
+                </div>
+                <div>
+                    <h3>Musculação</h3>
+                    <p>E os exercícios de força focam no trabalho dos músculos contra uma resistência. Ela é fundamental para fortalecer a musculatura, proteger as articulações e acelerar o metabolismo. O segredo para uma vida saudável é o equilíbrio entre os dois.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Texto 3: Como Começar a Treinar em Casa Sem Equipamentos -->
+        <section>
+            <h2>Como Começar a Treinar em Casa Sem Equipamentos</h2>
+            <p>Não ter uma assinatura de academia ou equipamentos caros não é desculpa para ficar parado. O próprio peso do nosso corpo é uma ferramenta incrível para treinar, uma prática conhecida como calistenia. É totalmente possível criar uma rotina eficiente na sala de casa utilizando movimentos básicos e naturais do corpo:</p>
+            <ul>
+                <li><strong>Agachamento:</strong> Excelente para trabalhar as pernas de forma dinâmica.</li>
+                <li><strong>Flexão de braço:</strong> Perfeito para o fortalecimento do peito e dos braços.</li>
+                <li><strong>Polichinelo:</strong> Movimento cardiovascular excelente para o coração.</li>
+            </ul>
+            <p>O importante é começar devagar, respeitar os limites do seu corpo e manter a regularidade.</p>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- Texto 4: Aquecimento e Alongamento -->
+        <section>
+            <div class="alert-box">
+                <h2>Aquecimento e Alongamento – Os Escudos Contra Lesões</h2>
+                <p>Muitas vezes ignorados por quem está com pressa, o aquecimento e o alongamento são etapas obrigatórias de qualquer treino seguro. O aquecimento serve para "avisar" o corpo que ele sairá do estado de repouso. Ele aumenta os batimentos cardíacos gradualmente, lubrifica as articulações e direciona o fluxo de sangue para os músculos que serão usados, reduzindo drasticamente o risco de lesões.</p>
+                <p>O alongamento, por sua vez, ajuda a manter ou melhorar a flexibilidade e relaxar o corpo. Tratar essas duas etapas com seriedade é o que garante que você conseguirá treinar hoje, amanhã e por muitos anos sem se machucar.</p>
+            </div>
+        </section>
+    </main>
+</div>
 
 </body>
 </html>
