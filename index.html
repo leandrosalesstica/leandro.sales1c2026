@@ -3,131 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emagrecimento e Saúde Mental | Blog</title>
+    <title>Meu Blog de Saúde e Bem-Estar</title>
     <style>
-        /* CSS Base para Visualização Limpa */
-        :root {
-            --primary: #2c3e50;
-            --accent: #16a085;
-            --bg: #fafafa;
-            --text: #333;
-            --alert-bg: #fff3cd;
-            --alert-border: #ffeba0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--bg);
+        /* Configurações Globais */
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-shadow: border-box;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
         }
-        header h1 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 15px;
+
+        html {
+            scroll-behavior: smooth;
         }
-        section, article {
-            margin-bottom: 40px;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .two-columns {
+
+        /* Menu de Navegação Interativo */
+        .navbar {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a252f;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: #1abc9c;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
             gap: 20px;
         }
-        .two-columns > div {
-            flex: 1;
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
-        ul {
-            padding-left: 20px;
+
+        .nav-links a:hover {
+            color: #1abc9c;
         }
-        li {
-            margin-bottom: 8px;
+
+        /* Cabeçalho (Hero Banner) */
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/400') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
         }
-        .alert-box {
-            background-color: var(--alert-bg);
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        @media (max-width: 600px) {
-            .two-columns {
-                flex-direction: column;
+
+        /* Container Principal (Layout em duas colunas) */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Área dos Posts */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .post-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .post-body {
+            padding: 20px;
+        }
+
+        .post-body h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* Barra Lateral (Sidebar) */
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none; /* Esconde o menu no mobile por enquanto */
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Emagrecimento e Saúde Mental: Um Olhar Realista e Moderno</h1>
+    <nav class="navbar">
+        <div class="logo">Saúde & Mente</div>
+        <ul class="nav-links">
+            <li><a href="#saude-mental">Saúde Mental</a></li>
+            <li><a href="#treino">Treino</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Emagrecimento e Saúde Mental</h1>
+        <p>Um olhar realista e moderno sobre o seu bem-estar</p>
     </header>
 
-    <main>
-        <!-- Texto 1: Exercícios e Saúde Mental -->
-        <article>
-            <img src="images/imagem 1.PNG"
-            <h2>Exercícios e Saúde Mental – O Seu Cérebro Também Agradece</h2>
-            <p>Praticar exercícios físicos vai muito além de buscar uma mudança no espelho; trata-se de um dos melhores remédios naturais para a nossa mente. Quando nos movimentamos, o corpo libera hormônios poderosos como a endorfina e a dopamina, conhecidos como os hormônios da felicidade. Eles são responsáveis por reduzir os níveis de estresse, aliviar a ansiedade e melhorar a qualidade do sono.</p>
-            <p>Para quem está na rotina puxada dos estudos, incluir uma atividade física no dia a dia ajuda a limpar a mente, aumenta a capacidade de foco e melhora a memória. Cuidar do corpo é, também, cuidar da cabeça.</p>
-        </article>
-
-        <!-- Texto 2: Aeróbico vs. Musculação -->
-        <section>
-            <h2>Aeróbico vs. Musculação – Entenda a Diferença</h2>
-            <div class="two-columns">
-                <div>
-                    <h3>Exercícios Aeróbicos</h3>
-                    <p>Como corrida, ciclismo, natação e dança — utilizam o oxigênio para gerar energia e focam na melhora do sistema cardiovascular, aumentando a sua resistência e o famoso "fôlego".</p>
+    <div class="container">
+        
+        <main class="main-content">
+            
+            <article id="saude-mental" class="post-card">
+                <img src="https://picsum.photos/800/400?random=1" alt="Exercícios" class="post-img">
+                <div class="post-body">
+                    <h2>Exercícios e Saúde Mental – O Seu Cérebro Também Agradece</h2>
+                    <p>Praticar exercícios físicos vai muito além de buscar uma mudança no espelho; trata-se de um dos melhores remédios naturais para a nossa mente. Quando nos movimentamos, o corpo libera hormônios poderosos como a endorfina e a dopamina...</p>
                 </div>
-                <div>
-                    <h3>Musculação</h3>
-                    <p>E os exercícios de força focam no trabalho dos músculos contra uma resistência. Ela é fundamental para fortalecer a musculatura, proteger as articulações e acelerar o metabolismo. O segredo para uma vida saudável é o equilíbrio entre os dois.</p>
+            </article>
+
+            <article id="treino" class="post-card">
+                <img src="https://picsum.photos/800/400?random=2" alt="Treino em Casa" class="post-img">
+                <div class="post-body">
+                    <h2>Como Começar a Treinar em Casa Sem Equipamentos</h2>
+                    <p>Não ter uma assinatura de academia ou equipamentos caros não é desculpa para ficar parado. O próprio peso do nosso corpo é uma ferramenta incrível para treinar, uma prática conhecida como calistenia...</p>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <!-- Texto 3: Como Começar a Treinar em Casa Sem Equipamentos -->
-        <section>
-            <img src="images/imagem 2.PNG"
-            <h2>Como Começar a Treinar em Casa Sem Equipamentos</h2>
-            <p>Não ter uma assinatura de academia ou equipamentos caros não é desculpa para ficar parado. O próprio peso do nosso corpo é uma ferramenta incrível para treinar, uma prática conhecida como calistenia. É totalmente possível criar uma rotina eficiente na sala de casa utilizando movimentos básicos e naturais do corpo:</p>
-            <ul>
-                <li><strong>Agachamento:</strong> Excelente para trabalhar as pernas de forma dinâmica.</li>
-                <li><strong>Flexão de braço:</strong> Perfeito para o fortalecimento do peito e dos braços.</li>
-                <li><strong>Polichinelo:</strong> Movimento cardiovascular excelente para o coração.</li>
-            </ul>
-            <p>O importante é começar devagar, respeitar os limites do seu corpo e manter a regularidade.</p>
-        </section>
+        </main>
 
-        <!-- Texto 4: Aquecimento e Alongamento -->
-        <section>
-         <img src="images/imagem 3.PNG"
-            <div class="alert-box">
-                <h2>Aquecimento e Alongamento – Os Escudos Contra Lesões</h2>
-                <p>Muitas vezes ignorados por quem está com pressa, o aquecimento e o alongamento são etapas obrigatórias de qualquer treino seguro. O aquecimento serve para "avisar" o corpo que ele sairá do estado de repouso. Ele aumenta os batimentos cardíacos gradualmente, lubrifica as articulações e direciona o fluxo de sangue para os músculos que serão usados, reduzindo drasticamente o risco de lesões.</p>
-                <p>O alongamento, por sua vez, ajuda a manter ou melhorar a flexibilidade e relaxar o corpo. Tratar essas duas etapas com seriedade é o que garante que você conseguirá treinar hoje, amanhã e por muitos anos sem se machucar.</p>
-            </div>
-        </section>
-    </main>
-</div>
+        <aside id="sobre" class="sidebar">
+            <h3>Sobre o Autor</h3>
+            <p>Olá! Este é um espaço dedicado a compartilhar dicas reais e modernas sobre saúde física e mental.</p>
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Blog Saúde & Mente. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
